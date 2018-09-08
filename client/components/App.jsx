@@ -1,18 +1,13 @@
-import React from 'react'
-import Circle from './Ethnicity'
-
+import React from "react";
+import Circle from "./Ethnicity";
 
 const App = () => {
-  return ( 
+  return (
     <div>
-    ra ra ra
-   
-<Circle />
+      lalalalal
+      <Circle />
+    </div>
+  );
+};
 
-      </div>
-    
-  )
-}
-
-export default App
-
+export default App;
