@@ -6,4 +6,5 @@ body {
 text {
   font-size: 12px;
   fill: white;
+  z-index: 5;
 }
