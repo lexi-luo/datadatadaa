@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 
-let nzEthnicities = [
-  {
-    ethnicity: "New Zealand European",
-    2001: 2696724,
-    2006: 2381076,
-    2013: 2727009
-  }
-];
 
-class Circle extends Component {
+class European extends Component {
   state = {
-    radius: ["28", "36", "49", "62", "78"],
     counter: 0,
-    years: ["2696724", "2381076", "2727009"]
+    european: ["26.96", "23.81", "27.27", "30", "40"],
+    years: ["2001: 2696724", "2006: 2381076", "2013: 2727009"]
     //{this.state.count}
   };
 
@@ -25,15 +17,15 @@ class Circle extends Component {
   handleIncrement = () => {
     console.log(this.state.counter);
 
-    console.log("clickie", this.state.radius[this.state.counter]);
-    if (this.state.counter > this.state.radius.length) {
+    console.log("clickie", this.state.european[this.state.counter]);
+    if (this.state.counter > this.state.european.length) {
       //only if you want to, reset counter back to 0 again
       this.setState({
         counter: 0
       });
     } else {
       this.setState({
-        radius: this.state.radius,
+        european: this.state.european,
         counter: this.state.counter + 1
       });
     }
@@ -44,27 +36,28 @@ class Circle extends Component {
       <div>
         <span>
           <ul>
-            {this.state.years.map(year => (
+            {this.state.years.map(year =>
               <li key={year}> {year} </li>
-            ))}
+            )}
           </ul>
+          this was so you could figure out lists for pop
 
-          <button onClick={this.handleIncrement}>go up</button>
-
-          <svg height="500" width="500">
+          <svg height="100%" width="100%">
             <circle
-              cx="250"
-              cy="250"
-              r={this.state.radius[this.state.counter]}
+              cx="50%"
+              cy="50%"
+              r={this.state.european[this.state.counter]}
               stroke="#33BDFF"
               strokeWidth="3"
               fill="#7DD2FB"
             />
           </svg>
+
+          <button onClick={this.handleIncrement}>pop</button>
         </span>
       </div>
     );
   }
 }
 
-export default Circle;
+export default European;

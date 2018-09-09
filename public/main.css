@@ -7,11 +7,3 @@ text {
   font-size: 12px;
   fill: white;
 }
-
-.circle {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(110, 10, 10);
-  border-radius: 50%;
-  display: inline-block;
-}
